@@ -73,3 +73,9 @@ Superseded by D009 after comparing CPD-certified course durations and regulated 
 **Decision:** Teach all 14 regulated allergens, current approved-information checks, prevention of allergen cross-contact, and the different information duties for loose, prepacked and prepacked-for-direct-sale food. Present written allergen information supported by a customer conversation as best practice for non-prepacked food.
 
 **Why:** La Fromagerie sells and serves food in each of these formats. This reflects current Food Standards Agency guidance while keeping the operational instruction clear: never guess, never remove an allergen and serve the same food, and do not claim safety when cross-contact cannot be controlled.
+
+## 2026-10-05 — D013: Cleaning and chemical-safety baseline
+
+**Decision:** Teach cleaning and disinfection as separate stages, with visible debris and grease removed before an approved disinfectant or sanitiser is used at its specified dilution and contact time. Include cleaning schedules, cloth control, safe chemical storage/use, waste, spill/breakage response and pest reporting.
+
+**Why:** This aligns with Food Standards Agency Safer Food Better Business controls and HSE COSHH principles. Exact products, colour coding, protective equipment and machinery methods remain site-specific and must follow La Fromagerie procedures and manufacturer instructions.

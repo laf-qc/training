@@ -130,6 +130,24 @@ moduleFourCheck.addEventListener("submit", (event) => {
     : "<strong>Not quite.</strong> Recipe memory and removing visible seeds cannot confirm safety. Stop and check approved information before giving the customer an answer.";
   sessionStorage.setItem("lf-module-four-check", correct ? "correct" : "reviewed");
 });
+
+const moduleFiveCheck = document.querySelector("#module-five-check");
+const moduleFiveFeedback = document.querySelector("#module-five-feedback");
+moduleFiveCheck.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const answer = new FormData(moduleFiveCheck).get("m5-check");
+  if (!answer) {
+    moduleFiveFeedback.className = "answer-feedback is-incorrect";
+    moduleFiveFeedback.textContent = "Choose an answer before continuing.";
+    return;
+  }
+  const correct = answer === "b";
+  moduleFiveFeedback.className = `answer-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+  moduleFiveFeedback.innerHTML = correct
+    ? "<strong>Correct.</strong> Food debris, dirt and grease can shield microorganisms and stop disinfectant reaching the surface effectively."
+    : "<strong>Not quite.</strong> Cleaning removes the dirt and grease that can prevent disinfectant working. You must still use the correct dilution and full contact time.";
+  sessionStorage.setItem("lf-module-five-check", correct ? "correct" : "reviewed");
+});
 document.addEventListener("keydown", (event) => {
   if (courseApp.hidden || ["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
   if (["ArrowRight", "PageDown"].includes(event.key)) { event.preventDefault(); showSlide(currentSlide + 1); }
