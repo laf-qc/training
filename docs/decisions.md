@@ -85,3 +85,9 @@ Superseded by D009 after comparing CPD-certified course durations and regulated 
 **Decision:** Teach the England operating framework of refrigeration targeted at 5°C or below, an 8°C legal maximum for food requiring chilling, hot holding at 63°C or above, and 70°C for two minutes as one recognised safe cooking combination. Teach limited two-hour hot and four-hour cold display flexibilities only as controlled exceptions under the company procedure, not everyday targets.
 
 **Why:** This reflects Food Standards Agency guidance while giving staff a safety margin and a clear response when readings drift. Product-specific cheese controls, validated cooking methods and any stricter La Fromagerie limits remain authoritative.
+
+## 2026-10-05 — D015: Receiving, storage and date-control baseline
+
+**Decision:** Teach delivery as an accept/isolate/reject control point; move temperature-controlled food promptly; store ready-to-eat food protected from raw food; and apply visible labelling, FEFO rotation and secure isolation. Treat use-by as a safety limit and best-before as a quality indicator, with company approval required for any sale or use decision after best-before.
+
+**Why:** These controls preserve safety, identity, allergen and traceability information from receipt to sale. Exact receiving limits, secondary shelf lives, storage zoning and product-quality decisions must follow La Fromagerie’s approved procedures.

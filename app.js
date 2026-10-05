@@ -166,6 +166,24 @@ moduleSixCheck.addEventListener("submit", (event) => {
     : "<strong>Not quite.</strong> Do not wait for the legal maximum to be exceeded or falsify a record. Verify the reading and act under the site procedure.";
   sessionStorage.setItem("lf-module-six-check", correct ? "correct" : "reviewed");
 });
+
+const moduleSevenCheck = document.querySelector("#module-seven-check");
+const moduleSevenFeedback = document.querySelector("#module-seven-feedback");
+moduleSevenCheck.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const answer = new FormData(moduleSevenCheck).get("m7-check");
+  if (!answer) {
+    moduleSevenFeedback.className = "answer-feedback is-incorrect";
+    moduleSevenFeedback.textContent = "Choose an answer before continuing.";
+    return;
+  }
+  const correct = answer === "b";
+  moduleSevenFeedback.className = `answer-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+  moduleSevenFeedback.innerHTML = correct
+    ? "<strong>Correct.</strong> A use-by date is a safety limit. Remove the food from sale or use and follow the approved isolation or disposal procedure."
+    : "<strong>Not quite.</strong> Appearance, smell or tasting cannot override a use-by date, and the date must never be changed. Remove the food from sale or use.";
+  sessionStorage.setItem("lf-module-seven-check", correct ? "correct" : "reviewed");
+});
 document.addEventListener("keydown", (event) => {
   if (courseApp.hidden || ["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
   if (["ArrowRight", "PageDown"].includes(event.key)) { event.preventDefault(); showSlide(currentSlide + 1); }
