@@ -91,3 +91,9 @@ Superseded by D009 after comparing CPD-certified course durations and regulated 
 **Decision:** Teach delivery as an accept/isolate/reject control point; move temperature-controlled food promptly; store ready-to-eat food protected from raw food; and apply visible labelling, FEFO rotation and secure isolation. Treat use-by as a safety limit and best-before as a quality indicator, with company approval required for any sale or use decision after best-before.
 
 **Why:** These controls preserve safety, identity, allergen and traceability information from receipt to sale. Exact receiving limits, secondary shelf lives, storage zoning and product-quality decisions must follow La Fromagerie’s approved procedures.
+
+## 2026-10-05 — D016: Safe systems and record integrity
+
+**Decision:** Present HACCP as a practical identify-control-check-act-review cycle. Require checks to be completed at the time, using the actual result and the learner’s own identity; missed checks and deviations must remain visible alongside corrective action. Include traceability, recalls, change control and escalation as shared food-handler responsibilities.
+
+**Why:** Accurate records demonstrate whether controls worked and allow rapid action during an incident. Concealing or backfilling a failure removes the opportunity to protect food and prevents managers from identifying recurring system problems.

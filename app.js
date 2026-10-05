@@ -184,6 +184,24 @@ moduleSevenCheck.addEventListener("submit", (event) => {
     : "<strong>Not quite.</strong> Appearance, smell or tasting cannot override a use-by date, and the date must never be changed. Remove the food from sale or use.";
   sessionStorage.setItem("lf-module-seven-check", correct ? "correct" : "reviewed");
 });
+
+const moduleEightCheck = document.querySelector("#module-eight-check");
+const moduleEightFeedback = document.querySelector("#module-eight-feedback");
+moduleEightCheck.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const answer = new FormData(moduleEightCheck).get("m8-check");
+  if (!answer) {
+    moduleEightFeedback.className = "answer-feedback is-incorrect";
+    moduleEightFeedback.textContent = "Choose an answer before continuing.";
+    return;
+  }
+  const correct = answer === "b";
+  moduleEightFeedback.className = `answer-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+  moduleEightFeedback.innerHTML = correct
+    ? "<strong>Correct.</strong> The record must show the missed check and the real corrective action. Assess and protect food that may have been affected."
+    : "<strong>Not quite.</strong> Never invent, hide or backfill a check. Record the exception, report it and document how affected food was protected or assessed.";
+  sessionStorage.setItem("lf-module-eight-check", correct ? "correct" : "reviewed");
+});
 document.addEventListener("keydown", (event) => {
   if (courseApp.hidden || ["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
   if (["ArrowRight", "PageDown"].includes(event.key)) { event.preventDefault(); showSlide(currentSlide + 1); }
