@@ -97,3 +97,15 @@ Superseded by D009 after comparing CPD-certified course durations and regulated 
 **Decision:** Present HACCP as a practical identify-control-check-act-review cycle. Require checks to be completed at the time, using the actual result and the learner’s own identity; missed checks and deviations must remain visible alongside corrective action. Include traceability, recalls, change control and escalation as shared food-handler responsibilities.
 
 **Why:** Accurate records demonstrate whether controls worked and allow rapid action during an incident. Concealing or backfilling a failure removes the opportunity to protect food and prevents managers from identifying recurring system problems.
+
+## 2026-10-05 — D017: Browser-local learner records for the pilot
+
+**Decision:** Require first and last name before learning begins and store progress, assessment answers, attempts, completion and refresher date in browser local storage under that normalised name. Make the limitation explicit: the record stays on that browser, can be cleared, and is not secure identity verification or the official company register.
+
+**Why:** This provides immediate resume capability on static GitHub Pages without collecting employee information on a server. A production release should move records to authenticated central storage.
+
+## 2026-10-05 — D018: Assessment, certificate and refresher reminder
+
+**Decision:** Use a 30-question assessment with a 24/30 (80%) pass mark. Passing creates a named internal-training certificate, stores a two-year suggested refresher date, displays due/overdue status on return and provides an iCalendar reminder download.
+
+**Why:** Calendar export and on-return status work without a backend. Reliable email or year-later push notifications require a central service or scheduled workflow and are deferred to the production learner-record phase.

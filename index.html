@@ -31,10 +31,23 @@
     </section>
   </div>
 
+  <div class="learner-gate" id="learner-gate" role="dialog" aria-modal="true" aria-labelledby="learner-title" hidden>
+    <section class="learner-panel">
+      <div class="learner-intro"><p class="eyebrow">Your learning record</p><h1 id="learner-title">Before you<br>begin…</h1><p>Enter your name exactly as you want it to appear on your certificate. On this device, the same name will reopen saved progress.</p></div>
+      <form id="learner-form" class="learner-form" novalidate>
+        <div><label for="first-name">First name</label><input id="first-name" name="first-name" autocomplete="given-name" required></div>
+        <div><label for="last-name">Last name</label><input id="last-name" name="last-name" autocomplete="family-name" required></div>
+        <button type="submit">Start or resume training</button>
+        <p class="form-error" id="learner-error" role="alert" aria-live="polite"></p>
+        <p class="security-note">Progress is stored only in this browser. On a shared device, another person who enters the same name could open this record. Do not use this as the company’s official training register.</p>
+      </form>
+    </section>
+  </div>
+
   <div class="course-app" id="course-app" hidden>
     <header class="topbar">
       <div class="compact-brand" aria-label="La Fromagerie"><strong>LA FROMAGERIE</strong><span>FOOD HYGIENE &amp; SAFETY</span></div>
-      <div class="topbar-actions"><span id="slide-count" aria-live="polite">1 / 10</span><button class="text-button" id="lock-button" type="button">Lock</button></div>
+      <div class="topbar-actions"><span id="learner-status"></span><span id="slide-count" aria-live="polite">1 / 10</span><button class="text-button" id="change-learner" type="button">Change learner</button><button class="text-button" id="lock-button" type="button">Lock</button></div>
     </header>
     <main class="presentation" id="presentation" tabindex="-1">
       <nav class="deck-rail" aria-label="Course slides">
@@ -48,6 +61,7 @@
         <button class="rail-link" type="button" data-slide-target="74" data-slide-end="90"><span>06</span><em>Temperature</em></button>
         <button class="rail-link" type="button" data-slide-target="91" data-slide-end="106"><span>07</span><em>Storage</em></button>
         <button class="rail-link" type="button" data-slide-target="107" data-slide-end="122"><span>08</span><em>Safe systems</em></button>
+        <button class="rail-link" type="button" data-slide-target="123" data-slide-end="125"><span>EX</span><em>Assessment</em></button>
       </nav>
       <div class="deck-stage">
         <section class="slide slide--welcome is-active" data-slide="0" aria-labelledby="slide-0-title">
@@ -324,6 +338,12 @@
         <section class="slide content-slide check-slide" data-slide="121" data-label="Module 8 · Knowledge check" aria-labelledby="slide-121-title" hidden><div class="check-heading"><p class="folio">KNOWLEDGE CHECK · SELECT ONE</p><h2 id="slide-121-title" tabindex="-1">A required temperature check was missed two hours ago. What should you record?</h2></div><form class="answer-list" id="module-eight-check"><label><input type="radio" name="m8-check" value="a"><span>Enter the usual reading so the sheet is complete.</span></label><label><input type="radio" name="m8-check" value="b"><span>Record that the check was missed, protect/assess affected food and document the action taken.</span></label><label><input type="radio" name="m8-check" value="c"><span>Leave it blank and do not mention it unless an inspector asks.</span></label><button type="submit">Check answer</button><div class="answer-feedback" id="module-eight-feedback" role="status" aria-live="polite"></div></form></section>
 
         <section class="slide content-slide recap-slide" data-slide="122" data-label="Module 8 · Recap" aria-labelledby="slide-122-title" hidden><div class="recap-number">08</div><div class="recap-copy"><p class="folio">MODULE RECAP</p><h2 id="slide-122-title" tabindex="-1">Follow. Check.<br>Record. Speak up.</h2><ol class="recap-list"><li><span>FOLLOW</span>Use the current approved safe method and limits for the task.</li><li><span>CHECK</span>Monitor controls at the required time and act on the real result.</li><li><span>RECORD</span>Make entries timely, legible, accurate and attributable to you.</li><li><span>SPEAK UP</span>Pause, protect and escalate uncertainty, failed controls and unsafe pressure.</li></ol><p class="recap-close">A strong food-safety culture makes problems visible early—while there is still time to protect the customer.</p></div></section>
+
+        <section class="slide assessment-intro" data-slide="123" data-label="Assessment · Introduction" aria-labelledby="slide-123-title" hidden><div class="assessment-mark">30</div><div class="assessment-intro-copy"><p class="folio">FINAL ASSESSMENT · APPROX. 25 MINUTES</p><h2 id="slide-123-title" tabindex="-1">Ready to show<br>what you know?</h2><div class="assessment-facts"><div><strong>30</strong><span>Questions</span></div><div><strong>24</strong><span>Correct to pass</span></div><div><strong>80%</strong><span>Pass mark</span></div></div><p>Answer every question. You can move backwards and forwards before submitting. Your answers are saved on this device as you go.</p><button id="start-assessment" type="button">Start or resume assessment</button><p class="source-note">This is a La Fromagerie internal-training assessment, not an externally accredited Level 2 examination.</p></div></section>
+
+        <section class="slide assessment-slide" data-slide="124" data-label="Final assessment" aria-labelledby="assessment-question" hidden><div class="assessment-sidebar"><p class="folio">FINAL ASSESSMENT</p><strong id="assessment-position">Question 1 of 30</strong><div class="assessment-dots" id="assessment-dots" aria-label="Answered question overview"></div><p id="assessment-saved">Answers save automatically on this device.</p></div><div class="assessment-question-panel"><p class="assessment-module" id="assessment-module">Module 1</p><h2 id="assessment-question" tabindex="-1"></h2><form id="assessment-form" class="assessment-options"></form><div class="assessment-actions"><button class="control-button control-button--secondary" id="assessment-previous" type="button">Previous question</button><button class="control-button" id="assessment-next" type="button">Next question</button><button class="control-button assessment-submit" id="assessment-submit" type="button" hidden>Submit assessment</button></div><p class="form-error" id="assessment-error" role="alert" aria-live="polite"></p></div></section>
+
+        <section class="slide result-slide" data-slide="125" data-label="Assessment · Result" aria-labelledby="result-title" hidden><div class="result-summary"><p class="folio">ASSESSMENT RESULT</p><h2 id="result-title" tabindex="-1">Your result</h2><div class="result-score" id="result-score"></div><p id="result-message"></p><button id="retake-assessment" type="button" hidden>Retake assessment</button></div><div class="certificate-wrap" id="certificate-wrap" hidden><article class="certificate" id="certificate"><div class="certificate-corner certificate-corner--tl"></div><div class="certificate-corner certificate-corner--br"></div><p class="certificate-brand">LA FROMAGERIE</p><p class="certificate-kicker">Certificate of achievement</p><strong class="certificate-recipient" id="certificate-name"></strong><p class="certificate-statement">has successfully passed the internal<br><b>Food Safety Training</b></p><p class="certificate-scoreline"><i>with a score of <span id="certificate-score"></span></i></p><p class="certificate-equivalence"><i>Intended to be equivalent to a Level 2 course</i></p><div class="certificate-presented"><span>Proudly presented by</span><div class="presenter-grid"><div><em class="signature">M. Sparrow</em><strong>Michael Sparrow</strong><p>Quality Control and Author</p></div><div><em class="signature">Patricia Michelson</em><strong>Patricia Michelson</strong><p>Owner and Director</p></div></div></div><div class="certificate-footer"><p>Completed: <strong id="certificate-date"></strong></p><p>Suggested refresher: within 2 years of completion</p><p>Certificate: <span id="certificate-id"></span></p></div></article><div class="certificate-actions"><button id="download-certificate" type="button">Click to download certificate</button><button id="print-certificate" type="button">Print or save as PDF</button><a class="button-link" id="calendar-reminder" download="la-fromagerie-refresher.ics">Add refresher to calendar</a></div><p class="manager-instruction"><strong>Manager:</strong> download the certificate, then upload it to the employee’s training folder in the La Fromagerie OneDrive.</p></div></section>
       </div>
       <footer class="deck-controls">
         <div class="progress-area"><span id="progress-label">Welcome</span><div class="progress-track" role="progressbar" aria-label="Presentation progress" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1"><div id="progress-value"></div></div></div>
