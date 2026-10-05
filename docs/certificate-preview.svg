@@ -31,11 +31,11 @@
   <path d="M250 550H1150" stroke="#9a4a1f" stroke-opacity=".55"/>
   <text x="700" y="603" text-anchor="middle" fill="#333138" font-family="Georgia, serif" font-size="21">Proudly presented by</text>
   <g text-anchor="middle">
-    <text x="440" y="685" fill="#1c5e75" font-family="Edwardian Script ITC, French Script MT, Brush Script MT, cursive" font-size="64" font-weight="500" letter-spacing="-5" transform="rotate(-4 440 685) skewX(-9)">M. Sparrow</text>
+    <text x="440" y="685" fill="#1c5e75" font-family="Edwardian Script ITC, French Script MT, Brush Script MT, cursive" font-size="64" font-weight="500" letter-spacing="-5">M. Sparrow</text>
     <path d="M270 705H610" stroke="#333138"/>
     <text x="440" y="740" fill="#333138" font-family="Arial, sans-serif" font-size="22" font-weight="700">Michael Sparrow</text>
     <text x="440" y="770" fill="#333138" font-family="Arial, sans-serif" font-size="18">Quality Control and Author</text>
-    <text x="960" y="685" fill="#1c5e75" font-family="Kunstler Script, Lucida Calligraphy, Segoe Script, cursive" font-size="48" font-weight="600" letter-spacing="-4" transform="rotate(2 960 685) skewX(-5)">Patricia Michelson</text>
+    <text x="960" y="685" fill="#1c5e75" font-family="Kunstler Script, Lucida Calligraphy, Segoe Script, cursive" font-size="48" font-weight="600" letter-spacing="-4">Patricia Michelson</text>
     <path d="M790 705H1130" stroke="#333138"/>
     <text x="960" y="740" fill="#333138" font-family="Arial, sans-serif" font-size="22" font-weight="700">Patricia Michelson</text>
     <text x="960" y="770" fill="#333138" font-family="Arial, sans-serif" font-size="18">Owner and Director</text>
