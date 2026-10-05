@@ -6,7 +6,7 @@ Planning repository for La Fromagerie's role-based food hygiene and safety learn
 
 The first release is the shared **General Food Hygiene & Safety** course for colleagues in the cheese room, cafe/restaurant, and shop across all stores. Department-specific learning will follow as separate pathways.
 
-The Welcome, course shell, and Modules 1–3 are implemented as a static GitHub Pages-ready presentation. The remaining module title slides are navigable placeholders.
+The Welcome, course shell, and Modules 1–4 are implemented as a static GitHub Pages-ready presentation. The remaining module title slides are navigable placeholders.
 
 ## Documents
 
@@ -27,7 +27,8 @@ The Welcome, course shell, and Modules 1–3 are implemented as a static GitHub 
 - [x] Build Module 1 after Welcome review
 - [x] Build Module 2 after Module 1 review
 - [x] Build Module 3 after Module 2 review
-- [ ] Review Modules 1–3 and confirm company-specific terminology
+- [x] Build Module 4 after Module 3 review
+- [ ] Review Modules 1–4 and confirm company-specific terminology
 - [ ] Staff review and food-safety competent-person review
 - [ ] Publish
 

@@ -112,6 +112,24 @@ moduleThreeCheck.addEventListener("submit", (event) => {
     : "<strong>Not quite.</strong> Gloves or avoiding one task do not remove the risk. Report the illness and remain excluded until the manager confirms it is safe to return—normally at least 48 hours after symptoms stop naturally.";
   sessionStorage.setItem("lf-module-three-check", correct ? "correct" : "reviewed");
 });
+
+const moduleFourCheck = document.querySelector("#module-four-check");
+const moduleFourFeedback = document.querySelector("#module-four-feedback");
+moduleFourCheck.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const answer = new FormData(moduleFourCheck).get("m4-check");
+  if (!answer) {
+    moduleFourFeedback.className = "answer-feedback is-incorrect";
+    moduleFourFeedback.textContent = "Choose an answer before continuing.";
+    return;
+  }
+  const correct = answer === "b";
+  moduleFourFeedback.className = `answer-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+  moduleFourFeedback.innerHTML = correct
+    ? "<strong>Correct.</strong> Never guess. Pause the order and use current approved information; if safety cannot be confirmed, say so clearly."
+    : "<strong>Not quite.</strong> Recipe memory and removing visible seeds cannot confirm safety. Stop and check approved information before giving the customer an answer.";
+  sessionStorage.setItem("lf-module-four-check", correct ? "correct" : "reviewed");
+});
 document.addEventListener("keydown", (event) => {
   if (courseApp.hidden || ["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
   if (["ArrowRight", "PageDown"].includes(event.key)) { event.preventDefault(); showSlide(currentSlide + 1); }
