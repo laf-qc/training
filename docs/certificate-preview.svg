@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="990" viewBox="0 0 1400 990" role="img" aria-labelledby="title desc">
+  <title id="title">La Fromagerie Food Safety Training certificate preview</title>
+  <desc id="desc">A formal cream, blue and russet certificate for a sample learner.</desc>
+  <defs>
+    <pattern id="paper" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="24" height="24" fill="#fffaf0"/>
+      <path d="M0 0V24" stroke="#1c5e75" stroke-opacity=".035" stroke-width="3"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="18%" r="72%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#fffaf0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1400" height="990" fill="url(#paper)"/>
+  <rect width="1400" height="990" fill="url(#glow)"/>
+  <rect x="28" y="28" width="1344" height="934" fill="none" stroke="#1c5e75" stroke-width="9"/>
+  <rect x="43" y="43" width="1314" height="904" fill="none" stroke="#1c5e75" stroke-width="2"/>
+  <rect x="54" y="54" width="1292" height="882" fill="none" stroke="#9a4a1f" stroke-width="1"/>
+  <g fill="none" stroke="#9a4a1f" opacity=".75">
+    <path d="M72 190V72H190" stroke-width="4"/><circle cx="112" cy="112" r="32"/><circle cx="112" cy="112" r="18"/>
+    <path d="M1210 918h118V800" stroke-width="4"/><circle cx="1288" cy="878" r="32"/><circle cx="1288" cy="878" r="18"/>
+  </g>
+  <text x="700" y="128" text-anchor="middle" fill="#1c5e75" font-family="Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="7">LA FROMAGERIE</text>
+  <text x="700" y="176" text-anchor="middle" fill="#333138" font-family="Arial, sans-serif" font-size="19" font-weight="600" letter-spacing="5">CERTIFICATE OF ACHIEVEMENT</text>
+  <path d="M420 205H980" stroke="#9a4a1f" stroke-width="2"/>
+  <text x="700" y="310" text-anchor="middle" fill="#9a4a1f" font-family="Georgia, serif" font-size="76" font-weight="700">Alexandra Example</text>
+  <text x="700" y="370" text-anchor="middle" fill="#333138" font-family="Georgia, serif" font-size="25">has successfully passed the internal</text>
+  <text x="700" y="430" text-anchor="middle" fill="#333138" font-family="Georgia, serif" font-size="45" font-weight="700">Food Safety Training</text>
+  <text x="700" y="480" text-anchor="middle" fill="#333138" font-family="Georgia, serif" font-size="27" font-style="italic">with a score of 93%</text>
+  <text x="700" y="518" text-anchor="middle" fill="#686762" font-family="Georgia, serif" font-size="14" font-style="italic">Intended to be equivalent to a Level 2 course</text>
+  <path d="M250 550H1150" stroke="#9a4a1f" stroke-opacity=".55"/>
+  <text x="700" y="603" text-anchor="middle" fill="#333138" font-family="Georgia, serif" font-size="21">Proudly presented by</text>
+  <g text-anchor="middle">
+    <text x="440" y="685" fill="#1c5e75" font-family="cursive" font-size="46" font-style="italic">M. Sparrow</text>
+    <path d="M270 705H610" stroke="#333138"/>
+    <text x="440" y="740" fill="#333138" font-family="Arial, sans-serif" font-size="22" font-weight="700">Michael Sparrow</text>
+    <text x="440" y="770" fill="#333138" font-family="Arial, sans-serif" font-size="18">Quality Control and Author</text>
+    <text x="960" y="685" fill="#1c5e75" font-family="cursive" font-size="43" font-style="italic">Patricia Michelson</text>
+    <path d="M790 705H1130" stroke="#333138"/>
+    <text x="960" y="740" fill="#333138" font-family="Arial, sans-serif" font-size="22" font-weight="700">Patricia Michelson</text>
+    <text x="960" y="770" fill="#333138" font-family="Arial, sans-serif" font-size="18">Owner and Director</text>
+  </g>
+  <path d="M160 825H1240" stroke="#9a4a1f" stroke-opacity=".55"/>
+  <text x="160" y="865" fill="#333138" font-family="Arial, sans-serif" font-size="18">Completed: <tspan font-weight="700">05/10/2026</tspan></text>
+  <text x="1240" y="865" text-anchor="end" fill="#333138" font-family="Arial, sans-serif" font-size="18">Suggested refresher: within 2 years of completion</text>
+  <text x="700" y="908" text-anchor="middle" fill="#686762" font-family="Arial, sans-serif" font-size="14">Certificate: LF-FHS-20261005-AE2048</text>
+</svg>
