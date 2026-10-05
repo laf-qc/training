@@ -181,7 +181,8 @@ document.querySelector("#download-certificate").addEventListener("click", () => 
   const percent = Math.round(currentProfile.lastScore / QUESTIONS.length * 100); context.font = "italic 52px Georgia"; context.fillText(`with a score of ${percent}%`, centre, 1060);
   context.font = "italic 36px Georgia"; context.fillText("Intended to be equivalent to a Level 2 course", centre, 1140);
   context.font = "36px Georgia"; context.fillText("Proudly presented by", centre, 1370);
-  context.font = "italic 82px cursive"; context.fillStyle = blue; context.fillText("M. Sparrow", 1100, 1570); context.fillText("Patricia Michelson", 2408, 1570);
+  context.save(); context.translate(1100, 1570); context.rotate(-0.07); context.transform(1, 0, -0.16, 1, 0, 0); context.font = "500 116px 'Edwardian Script ITC', 'French Script MT', cursive"; context.fillStyle = blue; context.fillText("M. Sparrow", 0, 0); context.restore();
+  context.save(); context.translate(2408, 1570); context.rotate(0.035); context.transform(1, 0, -0.09, 1, 0, 0); context.font = "600 88px 'Kunstler Script', 'Lucida Calligraphy', cursive"; context.fillStyle = blue; context.fillText("Patricia Michelson", 0, 0); context.restore();
   context.fillStyle = ink; context.font = "700 42px Arial"; context.fillText("Michael Sparrow", 1100, 1660); context.fillText("Patricia Michelson", 2408, 1660);
   context.font = "36px Arial"; context.fillText("Quality Control and Author", 1100, 1715); context.fillText("Owner and Director", 2408, 1715);
   context.strokeStyle = ink; context.lineWidth = 2; context.beginPath(); context.moveTo(650, 1590); context.lineTo(1550, 1590); context.moveTo(1958, 1590); context.lineTo(2858, 1590); context.stroke();
