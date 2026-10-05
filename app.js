@@ -148,6 +148,24 @@ moduleFiveCheck.addEventListener("submit", (event) => {
     : "<strong>Not quite.</strong> Cleaning removes the dirt and grease that can prevent disinfectant working. You must still use the correct dilution and full contact time.";
   sessionStorage.setItem("lf-module-five-check", correct ? "correct" : "reviewed");
 });
+
+const moduleSixCheck = document.querySelector("#module-six-check");
+const moduleSixFeedback = document.querySelector("#module-six-feedback");
+moduleSixCheck.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const answer = new FormData(moduleSixCheck).get("m6-check");
+  if (!answer) {
+    moduleSixFeedback.className = "answer-feedback is-incorrect";
+    moduleSixFeedback.textContent = "Choose an answer before continuing.";
+    return;
+  }
+  const correct = answer === "b";
+  moduleSixFeedback.className = `answer-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+  moduleSixFeedback.innerHTML = correct
+    ? "<strong>Correct.</strong> A 7°C display is above the recommended operating target. Check the food and equipment, record the true reading and follow the site corrective action."
+    : "<strong>Not quite.</strong> Do not wait for the legal maximum to be exceeded or falsify a record. Verify the reading and act under the site procedure.";
+  sessionStorage.setItem("lf-module-six-check", correct ? "correct" : "reviewed");
+});
 document.addEventListener("keydown", (event) => {
   if (courseApp.hidden || ["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) return;
   if (["ArrowRight", "PageDown"].includes(event.key)) { event.preventDefault(); showSlide(currentSlide + 1); }

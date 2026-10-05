@@ -79,3 +79,9 @@ Superseded by D009 after comparing CPD-certified course durations and regulated 
 **Decision:** Teach cleaning and disinfection as separate stages, with visible debris and grease removed before an approved disinfectant or sanitiser is used at its specified dilution and contact time. Include cleaning schedules, cloth control, safe chemical storage/use, waste, spill/breakage response and pest reporting.
 
 **Why:** This aligns with Food Standards Agency Safer Food Better Business controls and HSE COSHH principles. Exact products, colour coding, protective equipment and machinery methods remain site-specific and must follow La Fromagerie procedures and manufacturer instructions.
+
+## 2026-10-05 — D014: Temperature-control baseline
+
+**Decision:** Teach the England operating framework of refrigeration targeted at 5°C or below, an 8°C legal maximum for food requiring chilling, hot holding at 63°C or above, and 70°C for two minutes as one recognised safe cooking combination. Teach limited two-hour hot and four-hour cold display flexibilities only as controlled exceptions under the company procedure, not everyday targets.
+
+**Why:** This reflects Food Standards Agency guidance while giving staff a safety margin and a clear response when readings drift. Product-specific cheese controls, validated cooking methods and any stricter La Fromagerie limits remain authoritative.
