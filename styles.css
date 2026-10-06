@@ -84,3 +84,7 @@
 .slide[tabindex="0"]:focus{outline:none;box-shadow:none}
 @media(max-width:900px){.rail-link em{display:block;position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}}
 @media(max-width:620px){.hazard-grid,.responsibility-columns,.control-grid,.behaviour-grid,.wash-grid,.growth-factors,.object-grid,.schedule-grid,.storage-controls,.change-grid,.method-grid,.system-loop{grid-template-columns:1fr!important}.temperature-band{grid-template-columns:1fr!important}.assessment-dots{grid-template-columns:repeat(5,minmax(38px,1fr))}.assessment-dots button{min-height:44px}.assessment-question-panel h2{line-height:1.08}}
+.decision-reveal{max-width:760px;margin-top:1.2rem;border:1px solid var(--rule);background:var(--paper)}
+.decision-reveal summary{padding:1rem 1.2rem;color:var(--blue);font-weight:700;cursor:pointer}
+.decision-reveal summary:focus-visible{outline:3px solid #287b98;outline-offset:3px}
+.decision-reveal .decision-prompt{margin-top:0}

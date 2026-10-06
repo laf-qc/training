@@ -42,6 +42,7 @@
   </g>
   <path d="M160 825H1240" stroke="#9a4a1f" stroke-opacity=".55"/>
   <text x="160" y="865" fill="#333138" font-family="Arial, sans-serif" font-size="18">Completed: <tspan font-weight="700">05/10/2026</tspan></text>
-  <text x="1240" y="865" text-anchor="end" fill="#333138" font-family="Arial, sans-serif" font-size="18">Suggested refresher: within 2 years of completion</text>
+  <text x="1240" y="854" text-anchor="end" fill="#333138" font-family="Arial, sans-serif" font-size="17">Internal refresher due: 05/10/2027</text>
+  <text x="1240" y="880" text-anchor="end" fill="#333138" font-family="Arial, sans-serif" font-size="17">Certificate valid until: 05/10/2028</text>
   <text x="700" y="908" text-anchor="middle" fill="#686762" font-family="Arial, sans-serif" font-size="14">Certificate: LF-FHS-20261005-AE2048</text>
 </svg>

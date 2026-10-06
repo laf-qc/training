@@ -106,7 +106,7 @@ Superseded by D009 after comparing CPD-certified course durations and regulated 
 
 ## 2026-10-05 — D018: Assessment, certificate and refresher reminder
 
-**Decision:** Use a 30-question assessment with a 24/30 (80%) pass mark. Passing creates a named internal-training certificate, stores a two-year suggested refresher date, displays due/overdue status on return and provides an iCalendar reminder download.
+**Decision:** Use a 30-question assessment with a 24/30 (80%) pass mark. Passing creates a named internal-training certificate that is valid for two years. La Fromagerie’s internal refresher is due annually; the application stores the one-year due date, displays due/overdue status on return and provides an iCalendar reminder download.
 
 **Why:** Calendar export and on-return status work without a backend. Reliable email or year-later push notifications require a central service or scheduled workflow and are deferred to the production learner-record phase.
 

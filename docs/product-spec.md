@@ -168,7 +168,6 @@ Typography: Source Sans Pro where licensed/served appropriately, with a system s
 - After an unsuccessful attempt, route the learner to relevant recap cards before retrying.
 - Unlimited prototype retries; store attempt count and best/latest score.
 - Current pilot bank: 40 reviewed four-option items, with a balanced random draw of 30 and at least 18 applied scenarios in every possible draw.
-- Production question-bank target: at least 75 reviewed items after the remaining Level 2 coverage cards are added.
 - Every item records objective, correct rationale, distractor rationale, source, reviewer, and review date.
 
 ## 10. Certificate specification

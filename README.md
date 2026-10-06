@@ -36,7 +36,7 @@ The Welcome, course shell, all eight learning modules, learner progress, final a
 - [x] Build Module 8 after Module 7 review
 - [ ] Review Modules 1–8 and confirm company-specific terminology
 - [x] Build the 30-question final assessment and internal completion certificate
-- [x] Add browser-local named learner progress and two-year refresher calendar reminder
+- [x] Add browser-local named learner progress, annual refresher reminder and two-year certificate validity
 - [ ] Select a central training-record and automatic reminder service for production
 - [ ] Staff review and food-safety competent-person review
 - [ ] Publish

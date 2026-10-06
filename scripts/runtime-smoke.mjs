@@ -23,8 +23,9 @@ const mobile = await evaluate(`(()=>{const heading=document.querySelector('#asse
 if (!mobile.text || mobile.questionTop < 0 || mobile.questionTop >= mobile.viewport) throw new Error(`Question is not reachable on mobile: ${JSON.stringify(mobile)}`);
 
 await evaluate(`currentProfile.answers=QUESTIONS.map(item=>item.correct); saveProfile(); currentExamQuestion=29; renderAssessment(); document.querySelector('#assessment-submit').click();`); await wait(250);
-const result = await evaluate(`({title:document.querySelector('#result-title').textContent,score:document.querySelector('#result-score').textContent,certificate:!document.querySelector('#certificate-wrap').hidden,printReady:document.body.classList.contains('certificate-print-ready')})`);
-if (result.title !== "Assessment passed" || result.score !== "30 / 30" || !result.certificate || !result.printReady) throw new Error(`Pass flow failed: ${JSON.stringify(result)}`);
+const result = await evaluate(`({title:document.querySelector('#result-title').textContent,score:document.querySelector('#result-score').textContent,certificate:!document.querySelector('#certificate-wrap').hidden,printReady:document.body.classList.contains('certificate-print-ready'),completedAt:currentProfile.completedAt,dueAt:currentProfile.dueAt,validUntil:currentProfile.validUntil,footer:document.querySelector('.certificate-footer p:nth-child(2)').textContent})`);
+const yearDays = (later, earlier) => (new Date(later) - new Date(earlier)) / 86400000;
+if (result.title !== "Assessment passed" || result.score !== "30 / 30" || !result.certificate || !result.printReady || yearDays(result.dueAt, result.completedAt) < 364 || yearDays(result.dueAt, result.completedAt) > 366 || yearDays(result.validUntil, result.completedAt) < 729 || yearDays(result.validUntil, result.completedAt) > 731 || !result.footer.includes("Internal refresher due") || !result.footer.includes("Certificate valid until")) throw new Error(`Pass flow failed: ${JSON.stringify(result)}`);
 
 await evaluate(`document.querySelector('#lock-button').click()`); await wait(100);
 const locked = await evaluate(`({gate:!document.querySelector('#access-gate').hidden,current:sessionStorage.getItem('lf-current-learner')})`);
