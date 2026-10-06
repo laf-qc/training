@@ -1,5 +1,5 @@
 const ACCESS_KEY = "lf-training-access";
-const ACCESS_PHRASE_HASH = "61e780cdd24b1aba30cebcdca00aa46cc86a1b7ee3f37254e162faa6312534ac";
+const ACCESS_PHRASE_HASH = "3889e6c049489fc3c748b912de47aa167c0421940aa3f3347a4870160dcf980d";
 const PROFILES_KEY = "lf-training-profiles-v1";
 const CURRENT_LEARNER_KEY = "lf-current-learner";
 const gate = document.querySelector("#access-gate");
@@ -137,7 +137,7 @@ function startCourse(profileId, profile) { currentProfileId = profileId; current
 function unlock() { sessionStorage.setItem(ACCESS_KEY, "open"); gate.hidden = true; const id = sessionStorage.getItem(CURRENT_LEARNER_KEY); const profile = id ? readProfiles()[id] : null; if (profile) startCourse(id, profile); else { learnerGate.hidden = false; document.querySelector("#first-name").focus(); } }
 function lock() { sessionStorage.removeItem(ACCESS_KEY); sessionStorage.removeItem(CURRENT_LEARNER_KEY); currentProfile = null; currentProfileId = null; learnerStatus.textContent = ""; courseApp.hidden = true; learnerGate.hidden = true; gate.hidden = false; phraseInput.value = ""; accessError.textContent = ""; phraseInput.focus(); }
 
-accessForm.addEventListener("submit", async (event) => { event.preventDefault(); const candidate = phraseInput.value.trim().toLowerCase(); if (!candidate) { accessError.textContent = "Enter the staff access phrase."; return; } if (await sha256(candidate) === ACCESS_PHRASE_HASH) unlock(); else { accessError.textContent = "That phrase was not recognised. Check it or ask your manager."; phraseInput.select(); } });
+accessForm.addEventListener("submit", async (event) => { event.preventDefault(); const candidate = phraseInput.value.trim(); if (!candidate) { accessError.textContent = "Enter the staff access phrase."; return; } if (await sha256(candidate) === ACCESS_PHRASE_HASH) unlock(); else { accessError.textContent = "That phrase was not recognised. Check capital letters or ask your manager."; phraseInput.select(); } });
 learnerForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const firstName = document.querySelector("#first-name").value.trim().replace(/\s+/g, " ");
