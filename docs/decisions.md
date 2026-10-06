@@ -125,3 +125,11 @@ Superseded by D009 after comparing CPD-certified course durations and regulated 
 **Decision:** The approved shelf-life table/log is kept in the cheese room. Recalls are escalated to the warehouse and Technical Manager, or immediately through the store manager. La Fromagerie’s food-safety management system is Safer Food, Better Business (SFBB).
 
 **Why:** Stating the actual limits, record locations and escalation route lets staff apply the controls rather than being told only to find an unnamed procedure.
+
+## 2026-10-06 — D021: Applied assessment and accessibility upgrade
+
+**Decision:** Replace the fixed three-option examination with a versioned 40-item bank. Draw 30 questions to a balanced module blueprint, shuffle their order and shuffle answer choices while saving the exact attempt. Every question has four plausible options and every possible draw contains at least 18 applied scenarios. Preserve completed certificates; reset only incompatible unfinished assessment attempts.
+
+**Decision:** Label radio groups and answered states programmatically, move focus when questions change, make scrolling slides keyboard-focusable, stop hijacking normal page-scroll keys, strengthen focus and contrast, preserve mobile navigation labels for assistive technology and collapse complex grids on narrow screens.
+
+**Why:** A pass should demonstrate application rather than recognition of the longest answer, and colleagues using keyboards, zoom or assistive technology must be able to complete the same assessment independently.

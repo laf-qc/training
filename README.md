@@ -12,6 +12,7 @@ The Welcome, course shell, all eight learning modules, learner progress, final a
 
 - [Product and layout specification](docs/product-spec.md)
 - [General course curriculum](docs/general-course-curriculum.md)
+- [Level 2 subject-coverage plan](docs/level-2-coverage-plan.md)
 - [Decision log](docs/decisions.md)
 
 ## Status
@@ -22,6 +23,7 @@ The Welcome, course shell, all eight learning modules, learner progress, final a
 - [x] Quiz and certificate rules
 - [ ] Validate La Fromagerie procedures, temperatures, terminology, and escalation contacts
 - [ ] Write card-level training copy and quiz bank
+- [x] Plan the remaining Level 2 subject coverage and assessment-bank expansion
 - [x] Build the presentation-style Welcome milestone and staff entrance
 - [x] Add the bare-bones course deck and all eight module title slides
 - [x] Build Module 1 after Welcome review
