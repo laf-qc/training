@@ -118,6 +118,7 @@ function updateLearnerStatus() { if (currentProfile) learnerStatus.textContent =
 function showSlide(index, moveFocus = true) {
   document.body.classList.remove("certificate-print-ready");
   currentSlide = Math.max(0, Math.min(index, TOTAL_SLIDES - 1));
+  presentation.classList.toggle("assessment-mode", currentSlide >= 124);
   slides.forEach((slide, i) => { const active = i === currentSlide; slide.hidden = !active; slide.classList.toggle("is-active", active); slide.setAttribute("aria-hidden", String(!active)); });
   railLinks.forEach((link) => { const start = Number(link.dataset.slideTarget); const end = Number(link.dataset.slideEnd || start); const current = currentSlide >= start && currentSlide <= end; link.classList.toggle("is-current", current); if (current) link.setAttribute("aria-current", "step"); else link.removeAttribute("aria-current"); });
   previousButton.disabled = currentSlide === 0;

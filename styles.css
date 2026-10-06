@@ -88,3 +88,11 @@
 .decision-reveal summary{padding:1rem 1.2rem;color:var(--blue);font-weight:700;cursor:pointer}
 .decision-reveal summary:focus-visible{outline:3px solid #287b98;outline-offset:3px}
 .decision-reveal .decision-prompt{margin-top:0}
+.presentation.assessment-mode{grid-template-rows:minmax(0,1fr)}
+.assessment-mode .deck-controls{display:none}
+.assessment-mode .deck-rail{grid-row:1}
+.assessment-slide{grid-template-columns:1fr}
+.assessment-position-inline{margin:0 0 .25rem;color:var(--blue);font-size:1rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.assessment-position-inline+.assessment-module{margin-bottom:.6rem}
+@media(max-width:900px){.presentation.assessment-mode{grid-template-rows:auto minmax(520px,calc(100svh - 130px))}.assessment-mode .deck-rail{grid-row:1}.assessment-mode .deck-stage{grid-row:2}}
+@media(max-width:620px){.presentation.assessment-mode{grid-template-rows:62px minmax(560px,calc(100svh - 130px))}.assessment-question-panel{padding:1.4rem}.assessment-position-inline{font-size:.9rem}}
