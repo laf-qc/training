@@ -82,7 +82,7 @@ Superseded by D009 after comparing CPD-certified course durations and regulated 
 
 ## 2026-10-05 — D014: Temperature-control baseline
 
-**Decision:** Teach the England operating framework of refrigeration targeted at 5°C or below, an 8°C legal maximum for food requiring chilling, hot holding at 63°C or above, and 70°C for two minutes as one recognised safe cooking combination. Teach limited two-hour hot and four-hour cold display flexibilities only as controlled exceptions under the company procedure, not everyday targets.
+**Decision:** Teach refrigeration targeted at 5°C or below, an 8°C legal maximum for chilled food, hot holding at 63°C or above, and the recognised cooking combinations of 70°C for two minutes or 75°C for 30 seconds. Hot food may be below 63°C once for no more than two hours. Do not teach a general four-hour cold-display allowance: any ambient cheese display requires prior manager approval against the product specification.
 
 **Why:** This reflects Food Standards Agency guidance while giving staff a safety margin and a clear response when readings drift. Product-specific cheese controls, validated cooking methods and any stricter La Fromagerie limits remain authoritative.
 
@@ -109,3 +109,19 @@ Superseded by D009 after comparing CPD-certified course durations and regulated 
 **Decision:** Use a 30-question assessment with a 24/30 (80%) pass mark. Passing creates a named internal-training certificate, stores a two-year suggested refresher date, displays due/overdue status on return and provides an iCalendar reminder download.
 
 **Why:** Calendar export and on-return status work without a backend. Reliable email or year-later push notifications require a central service or scheduled workflow and are deferred to the production learner-record phase.
+
+## 2026-10-06 — D019: Confirmed La Fromagerie operating rules
+
+**Decision:** Use “manager” as the learner-facing escalation role. Illness must be reported by phoning the store or manager before the next shift. Handwashing takes at least 20 seconds; false nails and nail varnish are prohibited; jewellery is limited to a plain wedding band; hair is tied back and required coverings are worn; phones stay away from food areas; and gloves never replace handwashing. Approved tasting uses a clean utensil each time, protected time-controlled samples and stated allergen information.
+
+**Decision:** The slicer is restricted to ready-to-eat charcuterie and is never used for raw meat. Approved allergen information is held in the due-diligence records folder. La Fromagerie makes no formal allergen-free or gluten-free claims. PPDS controls apply to sandwiches. Product names for cleaning chemicals remain outside the course; staff use the current approved products, label instructions and COSHH information.
+
+**Why:** These rules were confirmed by Michael Sparrow for the shared general course and replace vague references to an unspecified company procedure.
+
+## 2026-10-06 — D020: Temperature, shelf-life, recall and SFBB controls
+
+**Decision:** Use these company limits: refrigeration target 5°C or below; chilled deliveries 8°C or below; frozen deliveries frozen solid with no evidence of thawing; cooking 70°C for two minutes or 75°C for 30 seconds; hot holding 63°C or above; no more than one two-hour period below 63°C; cooling into refrigeration within 90 minutes; and reheating to 75°C for 30 seconds, once only.
+
+**Decision:** The approved shelf-life table/log is kept in the cheese room. Recalls are escalated to the warehouse and Technical Manager, or immediately through the store manager. La Fromagerie’s food-safety management system is Safer Food, Better Business (SFBB).
+
+**Why:** Stating the actual limits, record locations and escalation route lets staff apply the controls rather than being told only to find an unnamed procedure.
