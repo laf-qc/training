@@ -1,5 +1,6 @@
 const ACCESS_KEY = "lf-training-access";
 const ACCESS_PHRASE_HASH = "3889e6c049489fc3c748b912de47aa167c0421940aa3f3347a4870160dcf980d";
+const COURSE_VERSION = "1.0";
 const PROFILES_KEY = "lf-training-profiles-v1";
 const CURRENT_LEARNER_KEY = "lf-current-learner";
 const gate = document.querySelector("#access-gate");
@@ -188,6 +189,9 @@ const assessmentPrevious = document.querySelector("#assessment-previous");
 const assessmentNext = document.querySelector("#assessment-next");
 const assessmentSubmit = document.querySelector("#assessment-submit");
 const assessmentError = document.querySelector("#assessment-error");
+document.querySelector(".certificate-pilot")?.remove();
+const managerInstruction = document.querySelector(".manager-instruction");
+if (managerInstruction) managerInstruction.innerHTML = "<strong>Training record:</strong> download this certificate and send it to your manager. The manager must upload it to the employee’s training folder on OneDrive.";
 function ensureAnswers() { prepareAssessment(); if (!Array.isArray(currentProfile.answers) || currentProfile.answers.length !== ASSESSMENT_SIZE) { currentProfile.answers = Array(ASSESSMENT_SIZE).fill(null); saveProfile(); } }
 function renderDots() { assessmentDots.innerHTML = QUESTIONS.map((_, index) => { const answered = currentProfile.answers[index] !== null; const current = index === currentExamQuestion; return `<button type="button" class="${answered ? "is-answered" : ""} ${current ? "is-current" : ""}" aria-label="Question ${index + 1}, ${answered ? "answered" : "not answered"}" ${current ? 'aria-current="step"' : ""}>${index + 1}</button>`; }).join(""); assessmentDots.querySelectorAll("button").forEach((button, index) => button.addEventListener("click", () => { currentExamQuestion = index; renderAssessment(true); })); }
 function renderAssessment(moveFocus = false) {
@@ -209,9 +213,9 @@ function renderResult() {
   let failMessage = "The pass mark is 24 out of 30. Review the course and try again when ready.";
   if (!passed && attempted && currentProfile.assessmentVersion === ASSESSMENT_VERSION) { prepareAssessment(); const results = Object.keys(MODULE_DRAW).map((module) => { const indexes = QUESTIONS.map((item, index) => item.module === module ? index : -1).filter((index) => index >= 0); const correct = indexes.filter((index) => currentProfile.answers[index] === QUESTIONS[index].correct).length; return { module, correct, total: indexes.length, ratio: correct / indexes.length }; }); const lowest = Math.min(...results.map((result) => result.ratio)); const topics = results.filter((result) => result.ratio === lowest).map((result) => result.module.replace("Module ", "Module ")).join(" and "); failMessage = `The pass mark is 24 out of 30. Start your review with ${topics}, then revisit its recap and examples.`; }
   document.querySelector("#result-score").textContent = score === null ? "—" : `${score} / ${ASSESSMENT_SIZE}`; document.querySelector("#result-title").textContent = passed ? "Assessment passed" : (attempted ? "Assessment not yet passed" : "Assessment not attempted");
-  document.querySelector("#result-message").textContent = passed ? `Congratulations—you achieved ${Math.round(score / ASSESSMENT_SIZE * 100)}%. Your pilot certificate is ready.` : (attempted ? failMessage : "Complete the assessment before a result or certificate can be issued.");
+  document.querySelector("#result-message").textContent = passed ? `Congratulations—you achieved ${Math.round(score / ASSESSMENT_SIZE * 100)}%. Your certificate is ready.` : (attempted ? failMessage : "Complete the assessment before a result or certificate can be issued.");
   const retakeButton = document.querySelector("#retake-assessment"); retakeButton.hidden = passed; retakeButton.textContent = (currentProfile.attempts || 0) >= 2 ? "Review with a manager before another attempt" : "Retake assessment"; document.querySelector("#certificate-wrap").hidden = !passed; if (!passed) return;
-  migrateCompletionSchedule(currentProfile); saveProfile(); document.querySelector("#certificate-name").textContent = `${currentProfile.firstName} ${currentProfile.lastName}`; document.querySelector("#certificate-date").textContent = new Intl.DateTimeFormat("en-GB").format(new Date(currentProfile.completedAt)); document.querySelector("#certificate-score").textContent = `${Math.round(score / ASSESSMENT_SIZE * 100)}%`; document.querySelector("#certificate-id").textContent = currentProfile.certificateId; document.querySelector(".certificate-footer p:nth-child(2)").textContent = `Internal refresher due: ${formatDate(currentProfile.dueAt)} · Certificate valid until: ${formatDate(currentProfile.validUntil)}`; buildCalendarLink();
+  migrateCompletionSchedule(currentProfile); saveProfile(); document.querySelector("#certificate-name").textContent = `${currentProfile.firstName} ${currentProfile.lastName}`; document.querySelector("#certificate-date").textContent = new Intl.DateTimeFormat("en-GB").format(new Date(currentProfile.completedAt)); document.querySelector("#certificate-score").textContent = `${Math.round(score / ASSESSMENT_SIZE * 100)}%`; document.querySelector("#certificate-id").textContent = currentProfile.certificateId; document.querySelector(".certificate-footer p:nth-child(2)").textContent = `Internal refresher due: ${formatDate(currentProfile.dueAt)} · Certificate valid until: ${formatDate(currentProfile.validUntil)}`; document.querySelector(".certificate-footer p:last-child").textContent = `Course version: ${COURSE_VERSION} · Certificate: ${currentProfile.certificateId}`; buildCalendarLink();
   if (currentSlide === TOTAL_SLIDES - 1) document.body.classList.add("certificate-print-ready");
 }
 assessmentSubmit.addEventListener("click", () => {
@@ -237,7 +241,6 @@ document.querySelector("#download-certificate").addEventListener("click", () => 
   context.fillStyle = ink; context.font = "46px Georgia"; context.fillText("has successfully passed the internal", centre, 835);
   context.font = "700 90px Georgia"; context.fillText("General Food Hygiene & Safety", centre, 950);
   const percent = Math.round(currentProfile.passingScore / ASSESSMENT_SIZE * 100); context.font = "italic 52px Georgia"; context.fillText(`with a score of ${percent}%`, centre, 1060);
-  context.fillStyle = rind; context.font = "700 28px Arial"; context.fillText("PILOT · NOT A TRAINING RECORD", centre, 190);
   context.fillStyle = ink; context.font = "32px Arial"; context.fillText("Internal La Fromagerie training covering topics commonly taught in Level 2 food safety courses.", centre, 1140); context.font = "700 32px Arial"; context.fillText("This is not an accredited or regulated qualification.", centre, 1190);
   context.font = "36px Georgia"; context.fillText("Proudly presented by", centre, 1370);
   context.font = "500 116px 'Edwardian Script ITC', 'French Script MT', cursive"; context.fillStyle = blue; context.fillText("M. Sparrow", 1100, 1570);
@@ -246,7 +249,7 @@ document.querySelector("#download-certificate").addEventListener("click", () => 
   context.font = "36px Arial"; context.fillText("Quality Control and Author", 1100, 1715); context.fillText("Owner and Director", 2408, 1715);
   context.strokeStyle = ink; context.lineWidth = 2; context.beginPath(); context.moveTo(650, 1590); context.lineTo(1550, 1590); context.moveTo(1958, 1590); context.lineTo(2858, 1590); context.stroke();
   context.textAlign = "left"; context.font = "34px Arial"; context.fillText(`Completed: ${new Intl.DateTimeFormat("en-GB").format(new Date(currentProfile.completedAt))}`, 300, 2075); context.fillText(`Internal refresher due: ${formatDate(currentProfile.dueAt)}`, 300, 2135); context.fillText(`Certificate valid until: ${formatDate(currentProfile.validUntil)}`, 300, 2195);
-  context.textAlign = "right"; context.font = "28px Arial"; context.fillText(`Course version: Pilot 0.9 · Certificate: ${currentProfile.certificateId}`, 3208, 2160);
+  context.textAlign = "right"; context.font = "28px Arial"; context.fillText(`Course version: ${COURSE_VERSION} · Certificate: ${currentProfile.certificateId}`, 3208, 2160);
   const link = document.createElement("a"); link.download = `La-Fromagerie-Food-Safety-${currentProfile.firstName}-${currentProfile.lastName}.png`; link.href = canvas.toDataURL("image/png"); link.click();
 });
 document.addEventListener("keydown", (event) => { if (courseApp.hidden || currentSlide === 124 || ["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) return; if (event.key === "ArrowRight") { event.preventDefault(); showSlide(currentSlide + 1); } if (event.key === "ArrowLeft") { event.preventDefault(); showSlide(currentSlide - 1); } });

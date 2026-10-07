@@ -167,7 +167,7 @@ Typography: Source Sans Pro where licensed/served appropriately, with a system s
 - Critical topics—illness reporting, allergens, ready-to-eat/raw separation, time/temperature control, and chemical safety—must appear in every attempt.
 - After an unsuccessful attempt, route the learner to relevant recap cards before retrying.
 - Unlimited prototype retries; store attempt count and best/latest score.
-- Current pilot bank: 40 reviewed four-option items, with a balanced random draw of 30 and at least 18 applied scenarios in every possible draw.
+- Current question bank: 40 reviewed four-option items, with a balanced random draw of 30 and at least 18 applied scenarios in every possible draw.
 - Every item records objective, correct rationale, distractor rationale, source, reviewer, and review date.
 
 ## 10. Certificate specification

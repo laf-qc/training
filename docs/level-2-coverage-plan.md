@@ -37,5 +37,5 @@ Close the remaining gaps against common UK Level 2 food-safety subject matter wh
 ## Completion sequence
 
 1. Conduct competent-person review.
-2. Pilot with staff from the cheese room, cafe/restaurant and shop.
+2. Complete user testing with staff from the cheese room, cafe/restaurant and shop.
 3. Revise content and publish the measured completion time.

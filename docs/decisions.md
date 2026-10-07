@@ -126,6 +126,12 @@ Superseded by D009 after comparing CPD-certified course durations and regulated 
 
 **Why:** Stating the actual limits, record locations and escalation route lets staff apply the controls rather than being told only to find an unnamed procedure.
 
+## 2026-10-07 — D022: Production release and training-record filing
+
+**Decision:** Release the course as version 1.0 and remove pilot-only wording from the certificate and completion screen. Keep the statement that this internal course is not an accredited or regulated qualification. A learner downloads the named certificate after passing and sends it to their manager; the manager uploads it to the employee’s OneDrive training folder as the retained training record.
+
+**Why:** Browser-local progress supports resuming the course but is not a central company register. Retaining the certificate in the controlled employee training folder gives managers a reviewable record while a future central completion service is considered.
+
 ## 2026-10-06 — D021: Applied assessment and accessibility upgrade
 
 **Decision:** Replace the fixed three-option examination with a versioned 40-item bank. Draw 30 questions to a balanced module blueprint, shuffle their order and shuffle answer choices while saving the exact attempt. Every question has four plausible options and every possible draw contains at least 18 applied scenarios. Preserve completed certificates; reset only incompatible unfinished assessment attempts.
